@@ -1,0 +1,94 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  background-color: #17181f;
+  color: #ddd;
+  font-family: Helvetica;
+}
+.app{
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+form{
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 5px;
+  display:flex;
+  
+}
+form input[type='text']{
+  background:none;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0 8px;
+  display:block;
+  width:100%;
+}
+
+form button{
+  background: #3e9ae0;
+  border-radius:2px;
+  width: 20px;
+  height: 20px;
+  border:0;
+}
+div.taskform{
+  width: 300px; /* set your desired width */
+}
+div.task{
+  background: #303130;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding:5px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  transition: opacity 0.5s linear;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 5px;
+  fill: #3e9ae0;
+}
+div.task span{
+  position:relative;
+}
+div.task span::before{
+  content: '';
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: #ddd;
+  position: absolute;
+  top: 10px;
+  transition: width 0.1s linear;
+}
+div.task.done span::before{
+  width: 100%;
+}
+.done{
+  opacity: 0.3;
+}
+div.task form{
+  border:none;
+  flex-grow:1;
+}
+h1,h2{
+  text-align: center;
+  margin: 2px;
+}
+div.task input{
+  border: 2px solid #555;
+  background: none;
+  border-radius: 2px;
+  flex-grow: 1;
+  
+}
